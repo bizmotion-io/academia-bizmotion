@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpgcpymes_spain_docusaurus=self.webpackChunkpgcpymes_spain_docusaurus||[]).push([[3162],{8991:s=>{s.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"pgc-general"}')}}]);

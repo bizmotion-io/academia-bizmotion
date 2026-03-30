@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
                        xmlns:moz="http://www.mozilla.org/2006/browser/search/">
-  <ShortName>Contabilidad</ShortName>
-  <Description>Search Contabilidad</Description>
+  <ShortName>Academia Bizmotion</ShortName>
+  <Description>Search Academia Bizmotion</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://tonicanada.github.io/pgc-spain-docs/img/icons/logo_bizmotion.ico</Image>
-  <Url type="text/html" method="get" template="https://tonicanada.github.io/pgc-spain-docs/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://tonicanada.github.io/pgc-spain-docs/opensearch.xml" />
-  <moz:SearchForm>https://tonicanada.github.io/pgc-spain-docs/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://academia.bizmotion.io/img/icons/logo_bizmotion.ico</Image>
+  <Url type="text/html" method="get" template="https://academia.bizmotion.io/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://academia.bizmotion.io/opensearch.xml" />
+  <moz:SearchForm>https://academia.bizmotion.io/</moz:SearchForm>
 </OpenSearchDescription>
