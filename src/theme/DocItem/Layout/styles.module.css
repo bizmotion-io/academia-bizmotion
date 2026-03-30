@@ -1,0 +1,31 @@
+.docItemContainer {
+  min-height: calc(
+    100dvh -
+    (var(--ifm-navbar-height) * 2) -
+    var(--ifm-spacing-vertical) -
+    (var(--ifm-spacing-vertical) * 2) -
+    2px
+  );
+  display: flex;
+  flex-direction: column;
+}
+
+.docArticle {
+  flex: 0 0 auto;
+}
+
+.docItemContainer header + *,
+.docItemContainer article > *:first-child {
+  margin-top: 0;
+}
+
+.docPaginatorContainer {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+@media (min-width: 997px) {
+  .docItemCol {
+    max-width: 75% !important;
+  }
+}

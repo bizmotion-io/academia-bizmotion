@@ -1,41 +1,41 @@
-# Website
+# Academia Bizmotion
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Sitio de cursos construido con Docusaurus.
 
-### Installation
+## Requisitos
 
-```
-$ yarn
-```
+- Node.js 18+
 
-### Local Development
+## Instalacion
 
-```
-$ yarn start
+```bash
+npm install
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## Desarrollo local
 
-### Build
-
-```
-$ yarn build
+```bash
+npm run start
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+## Build
 
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
+```bash
+npm run build
 ```
 
-Not using SSH:
+## Sitio publico
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
+- https://academia.bizmotion.io
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+## Estructura de contenido
+
+- `cursos/index.md`: catalogo de cursos
+- `cursos/<slug-curso>/`: contenido de cada curso
+
+Para crear un curso nuevo:
+
+1. Crea una carpeta nueva dentro de `cursos/`.
+2. Agrega un `index.md` para la portada del curso.
+3. Agrega modulos/clases en subcarpetas.
+4. Opcional: agrega `_category_.json` para etiquetas y orden en sidebar.

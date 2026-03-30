@@ -1,5 +1,5 @@
 {
-  "name": "pgcpymes-spain-docusaurus",
+  "name": "bzm_cursos",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -14,7 +14,7 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc"
   },
-  "homepage": "https://tonicanada.github.io/pgc-spain-docs",
+  "homepage": "https://academia.bizmotion.io",
   "dependencies": {
     "@docusaurus/core": "3.7.0",
     "@docusaurus/plugin-content-docs": "^3.7.0",

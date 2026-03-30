@@ -1,193 +1,76 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  background: linear-gradient(135deg, #003366 0%, #0055a5 100%);
-  color: white;
-  padding: 3rem 0;
-}
-
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
-
-/* BOTONES HERO */
-.buttons {
+.landingEmpty {
+  min-height: calc(100vh - (var(--ifm-navbar-height) * 2));
+  height: calc(100vh - (var(--ifm-navbar-height) * 2));
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* NUEVO */
-  gap: 12px;
-  flex-wrap: wrap;
+  padding: clamp(1.5rem, 4vw, 2.5rem) 1.25rem;
+  background-color: #f6faff;
+  background-image: url("/img/backgrounds/academy-hero-gradient.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-/* Subtítulo "suave" dentro del hero */
-.heroSubtle {
-  opacity: 0.9;
+.heroSimple {
+  width: min(680px, 100%);
+  text-align: center;
 }
 
-/* Micro-links bajo los botones */
-.microLinks {
-  margin-top: 12px;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-  font-size: 0.95rem;
-  opacity: 0.95;
+.brandKicker {
+  margin: 0 0 0.45rem;
+  color: #000000;
+  text-transform: uppercase;
+  font-size: clamp(2.15rem, 3.6vw, 2.7rem);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: 0.005em;
 }
 
-.microLink {
-  color: rgba(255, 255, 255, 0.92);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.microLink:hover {
-  color: #ffffff;
-}
-
-.microSeparator {
-  opacity: 0.6;
-}
-
-/* FEATURES */
-.features {
-  padding: 3rem 0;
-}
-
-.featureImage {
-  height: 120px;
-  margin-bottom: 1rem;
-}
-
-/* CURSO */
-.courseSection {
-  background-color: #f9f9f9;
-  padding: 4rem 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-}
-
-.courseImage {
-  max-width: 100%;
+.brandLogo {
+  width: clamp(200px, 24vw, 250px);
   height: auto;
+  margin: 0 auto 0.95rem;
+  display: block;
 }
 
-/* Botón custom (principal) */
-.customButton {
-  background-color: #FDFDFD; /* blanco cálido */
-  color: #1a1a1a;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  text-align: center;
+.description {
+  margin: 0.1rem auto 0;
+  max-width: 620px;
+  color: #334155;
+  font-size: clamp(1.05rem, 1.8vw, 1.16rem);
+  line-height: 1.52;
+}
+
+.ctaButton {
+  margin-top: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 134px;
+  height: 44px;
+  padding: 0 1.15rem;
+  border-radius: 12px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 550;
+  font-size: 0.96rem;
   text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.2);
+  transition: background-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.customButton:hover {
-  background-color: #F0F0F0; /* gris muy claro */
-  color: #1a1a1a; /* mantener texto oscuro */
-}
-
-/* (Opcional) si quieres ajustar algo del outline del segundo CTA */
-.customButtonOutline {
-  /* vacío a propósito: lo dejo por si quieres personalizarlo luego */
-}
-
-/* Bullets + CTAs del bloque curso */
-.bullets {
-  margin: 14px 0 18px;
-  padding-left: 18px;
-}
-
-.courseCtas {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
-}
-
-.smallNote {
-  font-size: 0.9rem;
-  opacity: 0.8;
-  margin-top: 8px;
-}
-
-/* Bloque final “autor/confianza” */
-.trustSection {
-  padding: 28px 0 40px;
-}
-
-.trustLinks {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  align-items: flex-start;
-}
-
-.trustTitle {
-  margin-bottom: 6px;
-}
-
-.trustText {
-  margin: 0;
-  opacity: 0.9;
-}
-
-/* =========================
-   HERO BUTTONS – FIX DEFINITIVO
-   ========================= */
-
-.heroButton {
-  min-width: 230px;
-  height: 48px;                 /* 🔑 ALTURA FIJA */
-  box-sizing: border-box;
-
-  display: inline-flex;         /* 🔑 */
-  align-items: center;          /* 🔑 */
-  justify-content: center;      /* 🔑 */
-
-  padding: 0 20px;              /* SOLO horizontal */
-  line-height: 1;               /* neutraliza herencias */
-
-  text-align: center;
-  font-weight: 600;
-}
-
-/* Botón principal (Curso) */
-.customButton {
-  background-color: #FDFDFD;
-  color: #1a1a1a;
-  border: none;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-}
-
-.customButton:hover {
-  background-color: #F0F0F0;
-  color: #1a1a1a;
-}
-
-/* Botón secundario (Plan de Cuentas) */
-.heroButtonOutline {
-  background: transparent;
+.ctaButton:hover {
+  background: #1d4ed8;
   color: #ffffff;
-  border: 2px solid rgba(255, 255, 255, 0.85);
-  border-radius: 6px;
-  transition: all 0.25s ease;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(29, 78, 216, 0.22);
 }
 
-.heroButtonOutline:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: #ffffff;
-  color: #ffffff;
+@media screen and (max-width: 768px) {
+  .landingEmpty {
+    min-height: calc(100vh - (var(--ifm-navbar-height) * 2));
+    height: auto;
+  }
 }

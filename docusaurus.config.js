@@ -2,13 +2,13 @@ require("dotenv").config();
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Contabilidad",
-  tagline: "Documentación del Plan General de Contabilidad (RD 1514/2007)",
-  url: "https://tonicanada.github.io",
-  organizationName: "tonicanada",
-  projectName: "pgc-spain-docs",
+  title: "Academia Bizmotion",
+  tagline: "Cursos practicos de contabilidad y ERP",
+  url: "https://academia.bizmotion.io",
+  organizationName: "bizmotion",
+  projectName: "bzm_cursos",
   trailingSlash: false,
-  baseUrl: "/pgc-spain-docs/",
+  baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/icons/logo_bizmotion.ico",
@@ -19,82 +19,75 @@ const config = {
   presets: [
     [
       "classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        // docs: {
-        //   sidebarPath: require.resolve('./sidebars/sidebars.js'),
-        //   editUrl: 'https://github.com/tonicanada/pgc-spain-docs/tree/master/',
-        // },
+      {
         docs: false,
         blog: false,
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
-      }),
+      },
     ],
   ],
   plugins: [
-    // Instancia "PGC General"
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "pgc-general", // ID único
-        path: "docs", // carpeta docs/
-        routeBasePath: "docs", // URL → /docs/...
-        sidebarPath: require.resolve("./sidebars/sidebars.js"),
-        editUrl: "https://github.com/tonicanada/pgc-spain-docs/tree/master/",
-      },
-    ],
-    // Instancia "Curso"
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "curso", // otro ID único
-        path: "curso", // carpeta sector-publico/
-        routeBasePath: "curso", // URL → /sector-publico/...
-        sidebarPath: require.resolve("./sidebars/sidebarsCurso.js"),
-        editUrl: "https://github.com/tonicanada/pgc-spain-docs/tree/master/",
+        id: "cursos",
+        path: "cursos",
+        routeBasePath: "cursos",
+        sidebarPath: require.resolve("./sidebars/sidebarsCursos.js"),
       },
     ],
   ],
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */ ({
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
       navbar: {
-        title: "PGC Español",
+        title: "Academia Bizmotion",
         items: [
-          { to: "/curso", label: "Curso", position: "left" },
           {
-            to: "/docs/plan-de-cuentas",
-            label: "Plan de cuentas",
+            type: "dropdown",
+            label: "Cursos",
             position: "left",
+            items: [
+              {
+                to: "/cursos/contabilidad-facil",
+                label: "Contabilidad facil: fundamentos y ERPNext",
+              },
+              {
+                to: "/cursos/bootcamp-erpnext-2025",
+                label: "Bootcamp ERPNext 2025",
+              },
+            ],
           },
         ],
       },
       colorMode: {
-        defaultMode: 'light', // Establece el tema claro como predeterminado
-        disableSwitch: true, // Desactiva el interruptor de cambio de tema
-        respectPrefersColorScheme: false, // Ignora la preferencia del sistema del usuario
+        defaultMode: "light",
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
       },
       footer: {
         style: "light",
-        links: [], // Deja vacío para que no agregue columnas innecesarias
+        links: [],
         copyright: `
-          <div style="display: flex; justify-content: center; gap: 1.5rem; align-items: center; margin-bottom: 0.5rem;">
-            <a href="https://www.linkedin.com/in/antoniocanada/" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <img src="/pgc-spain-docs/img/icons/logo_linkedin.svg" alt="LinkedIn" width="24" height="24" />
+          <div class="footer-bar">
+            <a href="https://www.linkedin.com/company/bizmotion-io" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <img src="/img/icons/logo_linkedin.svg" alt="LinkedIn" width="24" height="24" />
             </a>
             <a href="https://github.com/tonicanada" target="_blank" rel="noopener" aria-label="GitHub">
-              <img src="/pgc-spain-docs/img/icons/logo_github.svg" alt="GitHub" width="24" height="24" />
+              <img src="/img/icons/logo_github.svg" alt="GitHub" width="24" height="24" />
             </a>
             <a href="https://acmsoftware.cl/" target="_blank" rel="noopener" aria-label="Blog">
-              <img src="/pgc-spain-docs/img/icons/logo_blog.svg" alt="Blog" width="24" height="24" />
+              <img src="/img/icons/logo_blog.svg" alt="Blog" width="24" height="24" />
             </a>
-            <a href="https://medium.com/@tonicanada" target="_blank" rel="noopener" aria-label="Medium">
-              <img src="/pgc-spain-docs/img/icons/logo_medium.svg" alt="Medium" width="24" height="24" />
+            <a href="https://bizmotion.io/" target="_blank" rel="noopener" aria-label="Bizmotion">
+              <img class="footer-icon-black" src="/img/icons/logo_bizmotion.ico" alt="Bizmotion" width="24" height="24" />
             </a>
-          </div>
-          <div style="text-align: center;">
-            © ${new Date().getFullYear()} Antonio Cañada. Todos los derechos reservados.
+            <a href="https://medium.com/@antoniocanada" target="_blank" rel="noopener" aria-label="Medium">
+              <img src="/img/icons/logo_medium.svg" alt="Medium" width="24" height="24" />
+            </a>
+            <span class="footer-copy">© ${new Date().getFullYear()} Antonio Cañada</span>
           </div>
         `,
       },
@@ -112,7 +105,8 @@ const config = {
         },
         {
           name: "keywords",
-          content: "PGC, contabilidad, ERPNext, plan general contable, plan contable España, normas contables, asesor contable, consultor ERP, contabilidad España, curso PGC, curso contabilidad, ERP open source, contabilidad digital, software contable, formación contabilidad, formación ERP, ERP para pymes, automatización contable, normativa contable española, contabilidad financiera, cuentas anuales, cuadro de cuentas, integraciones ERPNext, implementación ERPNext, contabilidad para autónomos, balance de situación, cuenta de pérdidas y ganancias"
+          content:
+            "cursos contabilidad, cursos ERPNext, contabilidad para pymes, formacion contable, finanzas para emprendedores, curso contabilidad basica, ERP open source",
         },
         {
           name: "author",
@@ -120,8 +114,9 @@ const config = {
         },
         {
           name: "description",
-          content: "Sitio web sobre el Plan General Contable español (PGC) y su integración con ERPNext. Curso práctico y documentación para consultores y empresas en España.",
-        }
+          content:
+            "Plataforma de cursos practicos de contabilidad y ERPNext para emprendedores, pymes y profesionales.",
+        },
       ],
     }),
 };
