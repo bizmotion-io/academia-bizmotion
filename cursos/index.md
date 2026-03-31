@@ -1,6 +1,12 @@
 ---
 title: Catalogo de cursos
 slug: /
+description: Catalogo de cursos de contabilidad y ERPNext para emprendedores, pymes y consultores.
+keywords:
+  - cursos contabilidad
+  - curso ERPNext
+  - contabilidad para pymes
+  - formacion contable
 sidebar_position: 1
 ---
 

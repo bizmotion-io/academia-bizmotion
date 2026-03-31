@@ -1,6 +1,11 @@
 ---
 title: Bootcamp ERPNext 2025
 slug: /bootcamp-erpnext-2025
+description: Grabaciones del Bootcamp ERPNext 2025 con enfoque practico de implementacion y uso real.
+keywords:
+  - bootcamp ERPNext
+  - curso ERPNext 2025
+  - implementacion ERPNext
 sidebar_position: 1
 ---
 

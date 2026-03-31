@@ -5,11 +5,12 @@ import styles from "./index.module.css";
 
 export default function Home() {
   return (
-    <Layout title="Inicio" description="Academia Bizmotion">
+    <Layout
+      title="Cursos de Contabilidad y ERPNext"
+      description="Formacion practica en contabilidad y ERPNext para emprendedores, pymes y consultores."
+    >
       <main className={styles.landingEmpty}>
         <section className={styles.heroSimple}>
-          <p className={styles.brandKicker}>Academia</p>
-
           <a
             href="https://bizmotion.io/"
             target="_blank"
@@ -18,7 +19,7 @@ export default function Home() {
           >
             <img
               className={styles.brandLogo}
-              src="/img/brand/bizmotion-logo.png"
+              src="/img/brand/bizmotion-academia-logo.png"
               alt="Bizmotion"
             />
           </a>

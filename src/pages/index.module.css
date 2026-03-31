@@ -17,18 +17,8 @@
   text-align: center;
 }
 
-.brandKicker {
-  margin: 0 0 0.45rem;
-  color: #000000;
-  text-transform: uppercase;
-  font-size: clamp(2.15rem, 3.6vw, 2.7rem);
-  line-height: 1.05;
-  font-weight: 800;
-  letter-spacing: 0.005em;
-}
-
 .brandLogo {
-  width: clamp(200px, 24vw, 250px);
+  width: clamp(260px, 34vw, 360px);
   height: auto;
   margin: 0 auto 0.95rem;
   display: block;

@@ -22,11 +22,50 @@ const config = {
       {
         docs: false,
         blog: false,
+        sitemap: {
+          changefreq: "weekly",
+          priority: 0.5,
+          filename: "sitemap.xml",
+          ignorePatterns: ["/search", "/markdown-page"],
+        },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
       },
     ],
+  ],
+  headTags: [
+    {
+      tagName: "script",
+      attributes: {
+        type: "application/ld+json",
+      },
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Academia Bizmotion",
+        url: "https://academia.bizmotion.io",
+        logo: "https://academia.bizmotion.io/img/brand/bizmotion-logo.png",
+        sameAs: [
+          "https://www.linkedin.com/company/bizmotion-io",
+          "https://bizmotion.io/",
+          "https://medium.com/@antoniocanada",
+        ],
+      }),
+    },
+    {
+      tagName: "script",
+      attributes: {
+        type: "application/ld+json",
+      },
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "Academia Bizmotion",
+        url: "https://academia.bizmotion.io",
+        inLanguage: "es",
+      }),
+    },
   ],
   plugins: [
     [
@@ -67,6 +106,7 @@ const config = {
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },
+      image: "img/docusaurus-social-card.jpg",
       footer: {
         style: "light",
         links: [],
@@ -99,6 +139,10 @@ const config = {
         searchParameters: {},
       },
       metadata: [
+        {
+          name: "google-site-verification",
+          content: "5305d2a082dba1cb",
+        },
         {
           name: "algolia-site-verification",
           content: "7FD546744E8EA6D0",

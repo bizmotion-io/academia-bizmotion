@@ -1,6 +1,12 @@
 ---
 title: Curso de contabilidad facil
 slug: /contabilidad-facil
+description: Aprende contabilidad desde cero con ejemplos practicos y aplicacion real en ERPNext.
+keywords:
+  - curso de contabilidad facil
+  - fundamentos de contabilidad
+  - contabilidad en ERPNext
+  - contabilidad para emprendedores
 sidebar_position: 1
 ---
 

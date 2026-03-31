@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://academia.bizmotion.io/sitemap.xml
