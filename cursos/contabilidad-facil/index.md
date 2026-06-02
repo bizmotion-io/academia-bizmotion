@@ -70,10 +70,18 @@ La serie se compone de 4 clases principales:
 - Ejemplos con transacciones previas
 
 ### 📘 Clase 4: Demostración práctica en ERPNext
-- Qué es ERPNext
-- Funcionamiento básico del módulo contable
-- Ingreso de asientos, consultas de libros, reportes
-- Cómo aplicar lo aprendido dentro del sistema
+- Login, Home & Workspaces
+- Conceptos base: DocTypes, estados, links
+- Usuarios, roles & permisos
+- Company setup: cuentas, impuestos, defaults
+- Mapa de procesos ERPNext
+- Compra: OC -> PREC -> PINV -> Payment
+- Inventario & Stock Ledger
+- Venta: SO -> DN -> SINV -> Payment
+- Reportes & Excel I/O
+- Cierre: cómo pensar ERPNext
+
+> La primera parte publicada de la clase 4 cubre los primeros 5 puntos del índice.
 
 ---
 
