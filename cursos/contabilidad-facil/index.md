@@ -81,7 +81,7 @@ La serie se compone de 4 clases principales:
 - Reportes & Excel I/O
 - Cierre: cómo pensar ERPNext
 
-> La primera parte publicada de la clase 4 cubre los primeros 5 puntos del índice.
+> La clase 4 está disponible en dos partes y cubre todos los puntos del índice.
 
 ---
 
